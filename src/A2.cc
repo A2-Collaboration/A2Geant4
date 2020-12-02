@@ -4,6 +4,9 @@
 #include "G4UIterminal.hh"
 #include "G4UItcsh.hh"
 
+#define G4VIS_USE 1
+#define G4UI_USE 1
+
 #ifdef G4UI_USE_XM
 #include "G4UIXm.hh"
 #endif
@@ -13,10 +16,14 @@
 #endif
 
 #include "Randomize.hh"
+
+/*
 #ifdef G4UI_USE_QT
 #include "G4UIQt.hh"
 #include "G4Qt.hh"
 #endif
+*/
+
 #ifdef G4VIS_USE
 #include "G4VisExecutive.hh"
 #endif

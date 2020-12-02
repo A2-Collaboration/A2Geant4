@@ -26,6 +26,7 @@
 #include "A2SolidTarget.hh"
 #include "A2SolidTargetGeneric.hh"
 #include "A2PolarizedTarget.hh"
+#include "A2ActiveHe3.hh"
 #include "A2DetPID.hh"
 #include "A2DetPID3.hh"
 
@@ -223,6 +224,7 @@ G4VPhysicalVolume* A2DetectorConstruction::Construct()
     else if(fUseTarget=="Solid_Generic") fTarget=static_cast<A2Target*>(new A2SolidTargetGeneric());
     else if(fUseTarget=="Solid_Oct_18") fTarget=static_cast<A2Target*>(new A2SolidTargetGeneric(A2SolidTargetGeneric::kOct_18));
     else if(fUseTarget=="Polarized") fTarget=static_cast<A2Target*>(new A2PolarizedTarget());
+    else if(fUseTarget=="ActiveHe3") fTarget=static_cast<A2Target*>(new A2ActiveHe3());
     else{G4cerr<<"A2DetectorConstruction::Construct() Target type does not exist. See DetectorSetup.mac or README"<<G4endl;exit(1);}
     fTarget->SetMaterial(fTargetMaterial);
     if (fTargetLength)

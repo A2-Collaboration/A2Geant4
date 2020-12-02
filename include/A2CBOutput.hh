@@ -17,6 +17,7 @@ const G4int MAXSIZE_TAPS= 512;
 const G4int MAXSIZE_PID= 24;
 const G4int MAXSIZE_MWPC = 400;
 const G4int MAXSIZE_PIZZA = 24;
+const G4int MAXSIZE_HE3 = 72;
 
 class A2CBOutput 
 {
@@ -81,6 +82,16 @@ protected:
   Float_t *ftofy; //y hit position
   Float_t *ftofz; //z hit position
 
+  //NEW
+  //Active He3 Hits
+  Int_t fnhe3; //total number of active He3 hits
+  Int_t fihe3[MAXSIZE_HE3]; //hit index
+  Float_t fehe3[MAXSIZE_HE3]; //hit energy deposits
+  Float_t fthe3[MAXSIZE_HE3]; //hit time
+  //Float_t fhe3x[MAXSIZE_HE3]; //x position
+  //Float_t fhe3y[MAXSIZE_HE3]; //y position
+  //Float_t fhe3z[MAXSIZE_HE3]; //z position
+  
   Int_t fnpiz; //Number of hits in Pizza detector
   Int_t fipiz[MAXSIZE_PIZZA]; //hit sector indexes
   Float_t fepiz[MAXSIZE_PIZZA]; //hit sector energy deposits

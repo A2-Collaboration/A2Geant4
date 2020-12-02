@@ -1,0 +1,29 @@
+## Active Target Parameters
+## JRMA 30th June 2020
+##
+## Vessel dimensions in mm
+## length main cell
+## radius main cell
+## wall thickness
+## upstream extension length
+## downstream extension length
+## extension inner radius
+## Be window thickness
+AT-Dim: 420.0 51.0 1.5 150.0 50.0 10.0 0.5
+##
+## Wavelength shifting plates
+## # segments in 2pi phi
+## plate thickness
+## radial clearance to main vessel side
+## lateral clearance to main vessel ends
+AT-WLS: 8 3.0 2.0 5.0
+##
+## Scintillation Yield (# photons/MeV)
+AT-Scint: 1000
+##
+## Run Mode 0=no, 1=yes
+## Check overlaps
+## Use WLS
+## Run optical photon tracking
+## Section main cell along length
+Run-Mode: 0 1 0 0
